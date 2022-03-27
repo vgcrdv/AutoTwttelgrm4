@@ -20,8 +20,8 @@ jobs:
     - name: Descargar Archivos Necesarios
       run: |
         Invoke-WebRequest https://drive.google.com/uc?id=$Env:SESSION_DATA -OutFile "C:\Users\runneradmin\.config\data.zip"
-        Invoke-WebRequest https://raw.githubusercontent.com/vgcrdv/AutoTwttelgrm4/main/DuplTwi_R0_0_var.py -OutFile "C:\1Twitch\DuplTwi_R0_0_var.py"
-        Invoke-WebRequest https://raw.githubusercontent.com/vgcrdv/AutoTwttelgrm4/main/DuplTwi_R0_0.py -OutFile "C:\1Twitch\DuplTwi_R0_0.py"
+        Invoke-WebRequest https://raw.githubusercontent.com/vgcrdv/AutoTwttelgrm4/main/DuplTwi_R0_1_var.py -OutFile "C:\1Twitch\DuplTwi_R0_1_var.py"
+        Invoke-WebRequest https://raw.githubusercontent.com/vgcrdv/AutoTwttelgrm4/main/DuplTwi_R0_1.py -OutFile "C:\1Twitch\DuplTwi_R0_1.py"
       env:
         SESSION_DATA: ${{ secrets.SESSION_DATA_4 }}
     - name: Descomprimir Datos
@@ -31,6 +31,6 @@ jobs:
     - name: Ejecutar
       run: |
         cd "C:\1Twitch"
-        python DuplTwi_R0_0.py $Env:CHNLS_LINKS 1276622944,1276836846,1276522517,1276747850
+        python DuplTwi_R0_1.py $Env:CHNLS_LINKS 1277787436,1278098227,1277815043,1277935883,1277780627
       env:
         CHNLS_LINKS: ${{ secrets.CHNLS_LINKS }}
